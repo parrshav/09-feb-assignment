@@ -1,0 +1,73 @@
+OOPs Task
+Assignment Questions 
+Assignment 
+Q1, Create a vehicle class with an init method having instance variables as name_of_vehicle, max_speed  and average_of_vehicle.  
+Q2.  Create a child class car from the vehicle class created in Que 1, which will inherit the vehicle class.  Create a method named seating_capacity which takes capacity as an argument and returns the name of  the vehicle and its seating capacity. 
+Q3. What is multiple inheritance? Write a python code to demonstrate multiple inheritance. 
+Multiple inheritance is a feature in object-oriented programming where a class can inherit attributes and methods from multiple parent classes. This means that a child class can inherit from more than one parent class simultaneously, allowing it to combine and reuse functionality from multiple sources.
+class Animal:
+    def speak(self):
+        print("The animal makes a sound.")
+
+class Mammal:
+    def eat(self):
+        print("The mammal is eating.")
+
+class Dog(Animal, Mammal):
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):
+        print(f"The dog named {self.name} is wagging its tail.")
+
+# Creating an instance of the Dog class
+dog = Dog("Buddy")
+
+
+dog.greet()  
+dog.speak()  
+dog.eat()     
+
+
+Q4. What are getter and setter in python? Create a class and create a getter and a setter method in this  class. 
+In Python, getters and setters are methods used to access (get) and modify (set) the values of private attributes of a class. They provide a way to control access to the attributes and add additional logic or validation if needed.
+class person:
+    def __init__(self,name):
+        self.name=name
+    
+    def getname(self):
+        return self.name
+   
+    def setname(self,new_name):
+        self.new_name=new_name
+    
+person=person('parshav')
+print(person.getname())
+person.setname('rishika')
+print(person.getname())
+
+Q5.What is method overriding in python? Write a python code to demonstrate method overriding. 
+Method overriding is a feature in object-oriented programming where a child class provides its own implementation of a method that is already defined in its parent class.
+class Animal:
+    def speak(self):
+        print("The animal makes a sound.")
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
+
+
+cat = Cat()
+dog = Dog()
+
+
+cat.speak() 
+dog.speak()  
+
+
+Note: Create your assignment in Jupyter notebook and upload it to GitHub & share that GitHub repository   link through your dashboard. Make sure the repository is public. 
+Data Science Masters
